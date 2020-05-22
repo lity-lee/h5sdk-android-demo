@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.example.x5library.CoralWebView
+    <cn.admo5.x5Library.CoralWebView
         android:id="@+id/cwb"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -1,9 +1,9 @@
-package com.example.demo;
+package cn.admo5.demo;
 
 import android.app.Application;
 
-import com.example.x5library.CoralInit;
-import com.example.x5library.CoralWebView;
+
+import cn.admo5.x5Library.CoralInit;
 
 
 public class App extends Application {

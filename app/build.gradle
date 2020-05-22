@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.example.demo"
+        applicationId "cn.admo5.demo"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -36,5 +36,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    compile(name:'coralallibra', ext:'aar')
+    compile(name:'h5sdk20200522-1.0.0', ext:'aar')
 }
