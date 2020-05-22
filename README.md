@@ -106,7 +106,7 @@ public class App extends Application {
         android:layout_height="match_parent" />
 
 ```
-### 3.3加载对应的广告通过loadUrl能正常加载对应广告了
+### 3.3加载对应的广告通过loadUrl能正常加载对应广告了，提示webviw的设置和Android 自带的基本相同自行设置。对应请开1.1
 ```java
 ublic class WebActivity extends AppCompatActivity {
     @Override
@@ -140,3 +140,4 @@ import android.net.*;
 import android.net.http.
 
 ```
+
