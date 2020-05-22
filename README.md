@@ -1,6 +1,6 @@
 ##  1 导入文件：
 ###  1.1 导入aar依赖包
-##### 下载arr文件 coralallibra.aar ,复制到应用Module/libs文件夹（没有的话须手动创建）并将以下代码添加到您app的build.gradle中： 下载arr文件 coralallibra.aar ,复制到应用Module/libs文件夹（没有的话须手动创建）并将以下代码添加到您app的build.gradle中：
+##### 下载arr文件 [h5sdk2020xxxx-1.0.0.aar](http://admo5-static.2bx.com/h5sdk/aar/h5sdk20200522-1.0.0.aar "h5sdk2020xxxx-1.0.0.aar") , (xxxx是库的编译日期)复制到应用Module/libs文件夹（没有的话须手动创建）并将以下代码添加到您app的build.gradle中:
 ```xml
    repositories {
         flatDir {
@@ -8,23 +8,16 @@
         }
     }
 	 depedencies {
-	compile(name:'coralallibra', ext:'aar')
+	compile(name:'h5sdk20200522-1.0.0', ext:'aar')
 	}
 ```
-##### #### 将源码和XML里的系统包和类替换为SDK里的包和类，具体对应如下将源码和XML里的系统包和类替换为SDK里的包和类，具体对应如下：
-
-
 ### 1.2添加对应的权限
 
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
 <uses-permission android:name="android.permission.INTERNET" />
-
 <uses-permission  android:name="android.permission.READ_PHONE_STATE" />
 ```
 ## 2适配不同版本
@@ -62,7 +55,8 @@
  android:name="androidx.core.content.FileProvider"
 ```
 ## 3 SDK集成部署介绍
-### 3.1初始化SDK在，你的Application 加入CoralInit.Init(getApplicationContext());
+### 3.1初始化SDK
+##### 在你的Application 加入CoralInit.Init(getApplicationContext());
 ````xml
 public class App extends Application {
     @Override
@@ -72,15 +66,15 @@ public class App extends Application {
     }
 }
 ````
-### 3.2web控件使用
+### 3.2使用CoralWebView替换android原生webView
 ```xml
-   <com.example.x5library.CoralWebView
+   <cn.admo5.x5Library.CoralWebView
         android:id="@+id/cwb"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
 ```
-### 3.3加载对应的广告通过loadUrl能正常加载对应广告了
+### 3.3加载对应接入广告的H5页面代码如下：
 ```java
 public class WebActivity extends AppCompatActivity {
     @Override
@@ -94,9 +88,9 @@ public class WebActivity extends AppCompatActivity {
     }
 }
 ```
-##### 快速调用
+##### 或快速调用
 ```xml
-WebViewBuilder.create().headBarShow(true).start(MainActivity.this,"http://debugtbs.qq.com");
-WebViewBuilder.create().start(MainActivity.this,"http://soft.imtt.qq.com/browser/tes/feedback.html");
+	WebViewBuilder.create().headBarShow(true).start(MainActivity.this,"http://h5-demo.sdk.2bx.com/index.html");
+	WebViewBuilder.create().start(MainActivity.this,"http://h5-demo.sdk.2bx.com/index.html");
 
 ```
