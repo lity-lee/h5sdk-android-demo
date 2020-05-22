@@ -1,5 +1,3 @@
-# h5sdk-android-demo
-h5sdk android demo
 ##  1 导入文件：
 ###  1.1 导入aar依赖包
 ##### 下载arr文件 coralallibra.aar ,复制到应用Module/libs文件夹（没有的话须手动创建）并将以下代码添加到您app的build.gradle中： 下载arr文件 coralallibra.aar ,复制到应用Module/libs文件夹（没有的话须手动创建）并将以下代码添加到您app的build.gradle中：
@@ -14,31 +12,7 @@ h5sdk android demo
 	}
 ```
 ##### #### 将源码和XML里的系统包和类替换为SDK里的包和类，具体对应如下将源码和XML里的系统包和类替换为SDK里的包和类，具体对应如下：
-```xml
-系统内核	                                                       SDK内核
-android.webkit.ConsoleMessage	com.tencent.smtt.export.external.interfaces.ConsoleMessage
-android.webkit.CacheManager	com.tencent.smtt.sdk.CacheManager(deprecated)
-android.webkit.CookieManager	com.tencent.smtt.sdk.CookieManager
-android.webkit.CookieSyncManager	com.tencent.smtt.sdk.CookieSyncManager
-android.webkit.CustomViewCallback	com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomViewCallback
-android.webkit.DownloadListener	com.tencent.smtt.sdk.DownloadListener
-android.webkit.GeolocationPermissions	com.tencent.smtt.export.external.interfaces.GeolocationPermissionsCallback
-android.webkit.HttpAuthHandler	com.tencent.smtt.export.external.interfaces.HttpAuthHandler
-android.webkit.JsPromptResult	com.tencent.smtt.export.external.interfaces.JsPromptResult
-android.webkit.JsResult	com.tencent.smtt.export.external.interfaces.JsResult
-android.webkit.SslErrorHandler	com.tencent.smtt.export.external.interfaces.SslErrorHandler
-android.webkit.ValueCallback	com.tencent.smtt.sdk.ValueCallback
-android.webkit.WebBackForwardList	com.tencent.smtt.sdk.WebBackForwardList
-android.webkit.WebChromeClient	com.tencent.smtt.sdk.WebChromeClient
-android.webkit.WebHistoryItem	com.tencent.smtt.sdk.WebHistoryItem
-android.webkit.WebIconDatabase	com.tencent.smtt.sdk.WebIconDatabase
-android.webkit.WebResourceResponse	com.tencent.smtt.export.external.interfaces.WebResourceResponse
-android.webkit.WebSettings	com.tencent.smtt.sdk.WebSettings
-android.webkit.WebSettings.LayoutAlgorithm	com.tencent.smtt.sdk.WebSettings.LayoutAlgorithm
-android.webkit.WebStorage	com.tencent.smtt.sdk.WebStorage
-android.webkit.WebView	com.tencent.smtt.sdk.WebView
-android.webkit.WebViewClient	com.tencent.smtt.sdk.WebViewClient
-```
+
 
 ### 1.2添加对应的权限
 
@@ -88,7 +62,7 @@ android.webkit.WebViewClient	com.tencent.smtt.sdk.WebViewClient
  android:name="androidx.core.content.FileProvider"
 ```
 ## 3 SDK集成部署介绍
-### 3.1初始化web库
+### 3.1初始化SDK在，你的Application 加入CoralInit.Init(getApplicationContext());
 ````xml
 public class App extends Application {
     @Override
@@ -106,9 +80,9 @@ public class App extends Application {
         android:layout_height="match_parent" />
 
 ```
-### 3.3加载对应的广告通过loadUrl能正常加载对应广告了，提示webviw的设置和Android 自带的基本相同自行设置。对应请开1.1
+### 3.3加载对应的广告通过loadUrl能正常加载对应广告了
 ```java
-ublic class WebActivity extends AppCompatActivity {
+public class WebActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,22 +96,7 @@ ublic class WebActivity extends AppCompatActivity {
 ```
 ##### 快速调用
 ```xml
-	WebViewBuilder.create().headBarShow(true).start(MainActivity.this,"http://debugtbs.qq.com");
-			WebViewBuilder.create().start(MainActivity.this,"http://soft.imtt.qq.com/browser/tes/feedback.html");
+WebViewBuilder.create().headBarShow(true).start(MainActivity.this,"http://debugtbs.qq.com");
+WebViewBuilder.create().start(MainActivity.this,"http://soft.imtt.qq.com/browser/tes/feedback.html");
 
 ```
-## 注意事项：
-##### 1请不要在代码里使用下述写法：
-```java
-import android.*;
-
-import android.webkit.*;
-
-import android.webkit.WebStorage.*;
-
-import android.net.*;
-
-import android.net.http.
-
-```
-
