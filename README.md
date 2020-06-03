@@ -19,6 +19,7 @@
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission  android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
 ```
 ## 2适配不同版本
 ### #### 2.1 适配7.0及以上
@@ -43,6 +44,7 @@
              <external-path name="external_storage_root" path="." />
              <external-path name="external_storage_download" path="Download" />
              <files-path path="images/" name="my_images" />
+			  <external-path name="download" path="" />
           </paths>
 ```
 ### 2.2为了适配9.0激励适配广告，请在入口的Appcation 添加
