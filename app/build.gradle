@@ -36,5 +36,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    compile(name:'h5sdk20200522-1.0.0', ext:'aar')
+    compile(name:'h5sdk20200602-1.0.2', ext:'aar')
 }

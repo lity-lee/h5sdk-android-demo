@@ -11,8 +11,12 @@ import com.tencent.smtt.sdk.WebChromeClient;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import cn.admo5.x5Library.CoralWebView;
+import cn.admo5.x5Library.WebTool;
 
 public class WebActivity extends AppCompatActivity {
+
+    private WebTool mWebTool;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,7 @@ public class WebActivity extends AppCompatActivity {
         CoralWebView cwv = findViewById(R.id.cwb);
         cwv.getSettings().setJavaScriptEnabled(true);// 支持js
         cwv.getSettings().setUseWideViewPort(true); //自适应屏幕
+        mWebTool = new WebTool(cwv,this);
         cwv.loadUrl("http://h5-demo.sdk.2bx.com/index.html");
         cwv.setDownloadListener(new DownloadListener() {
             @Override
@@ -29,5 +34,11 @@ public class WebActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mWebTool.onRecycle();
     }
 }
