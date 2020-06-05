@@ -1,6 +1,6 @@
 ##  1 导入文件：
 ###  1.1 导入aar依赖包
-##### 下载arr文件 [h5sdk2020xxxx-1.0.0.aar](http://admo5-static.2bx.com/h5sdk/aar/h5sdk20200522-1.0.0.aar "h5sdk2020xxxx-1.0.0.aar") , (xxxx是库的编译日期)复制到应用Module/libs文件夹（没有的话须手动创建）并将以下代码添加到您app的build.gradle中:
+##### 下载arr文件  [h5sdk2020xxxx-1.0.2.aar](http://admo5-static.2bx.com/h5sdk/aar/h5sdk.aar) , (xxxx是库的编译日期)复制到应用Module/libs文件夹（没有的话须手动创建）并将以下代码添加到您app的build.gradle中:
 ```xml
    repositories {
         flatDir {
@@ -8,7 +8,7 @@
         }
     }
 	 depedencies {
-	compile(name:'h5sdk20200522-1.0.0', ext:'aar')
+	compile(name:'h5sdk20200602-1.0.2', ext:'aar')
 	}
 ```
 ### 1.2添加对应的权限
