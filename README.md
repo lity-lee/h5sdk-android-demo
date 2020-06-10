@@ -96,3 +96,4 @@ public class WebActivity extends AppCompatActivity {
 	WebViewBuilder.create().start(MainActivity.this,"http://h5-demo.sdk.2bx.com/index.html");
 
 ```
+###注意如果项目不兼容AndroidX 请切换V7分支
