@@ -1,17 +1,16 @@
 package cn.admo5.demo;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
 
 import com.tencent.smtt.sdk.DownloadListener;
-import com.tencent.smtt.sdk.WebChromeClient;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import cn.admo5.x5Library.CoralWebView;
-import cn.admo5.x5Library.WebTool;
+import cn.admo5.x5Library.util.WebTool;
+import cn.admo5.x5Library.view.CoralWebView;
 
 public class WebActivity extends AppCompatActivity {
 

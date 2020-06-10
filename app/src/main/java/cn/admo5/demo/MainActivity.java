@@ -1,10 +1,10 @@
 package cn.admo5.demo;
 
-import androidx.appcompat.app.AppCompatActivity;
 import cn.admo5.x5Library.WebViewBuilder;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 WebViewBuilder.create()
-                        .headBarShow(true)
                         .headCreate()
                         .setHtext("广告")
                         .build()
